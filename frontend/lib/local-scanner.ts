@@ -203,7 +203,7 @@ export const LOCAL_POLICIES: Policy[] = [
 ];
 
 // Simple Client-side regex engine port
-export function scanCodeLocally(content: str, filename: str, cloud: str): ScanResult {
+export function scanCodeLocally(content: string, filename: string, cloud: string): ScanResult {
   const violations: Violation[] = [];
   const lines = content.split('\n');
   
