@@ -4,7 +4,7 @@ PolicySync is a full-stack, enterprise-grade Policy as Code (PaC) security enfor
 
 [![PolicySync Dashboard](assets/dashboard.png)](https://jithun02.github.io/CLOUD-GAURD/overview)
 
----
+---https://jithun02.github.io/CLOUD-GAURD/overview
 
 ## 🚀 Key Features
 
