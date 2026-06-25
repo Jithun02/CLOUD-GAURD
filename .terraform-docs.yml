@@ -1,0 +1,33 @@
+version = 0
+formatter = "markdown"
+header_from = "main.tf"
+footer_from = ""
+indent = 2
+content = <<-EOT
+  {{ .Content }}
+
+  {{ if .Inputs -}}
+  ## Inputs
+
+  | Name | Description | Type | Default |
+  |------|-------------|------|---------|
+  {{- range .Inputs }}
+  | `{{ .Name }}` | {{ .Description }} | `{{ .Type }}` | {{ if eq .Default "N/A" }}`{{ .Default }}`{{ else }}{{ if eq .Default "" }}-{{ else }}`{{ .Default }}`{{ end }}{{ end }} |
+  {{- endrange }}
+  {{ end -}}
+
+  {{ if .Outputs -}}
+  ## Outputs
+
+  | Name | Description |
+  |------|-------------|
+  {{- range .Outputs }}
+  | `{{ .Name }}` | {{ .Description }} |
+  {{- endrange }}
+  {{ end -}}
+EOT
+
+recursive {
+  enabled = true
+  path    = "terraform"
+}

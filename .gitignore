@@ -1,0 +1,54 @@
+# Terraform files and directories
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+tfplan
+.terraform.lock.hcl
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.vscode/
+*.code-workspace
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Project files
+.env
+.env.local
+secrets.json
+credentials.json
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+dist/
+build/
+node_modules/
+.next/
+venv/
+backend/venv/
+out/
+frontend/out/
+frontend/node_modules/
+frontend/.next/
+__pycache__/
+backend/__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,42 @@
+# Pre-commit hooks for Terraform
+# Install with: pre-commit install
+# Run manually with: pre-commit run --all-files
+
+repos:
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.81.0
+    hooks:
+      - id: terraform_fmt
+        stages: [commit]
+      
+      - id: terraform_validate
+        stages: [commit]
+      
+      - id: terraform_tflint
+        stages: [commit]
+        args:
+          - '--args=-c=.tflint.hcl'
+      
+      - id: terraform_trivy
+        stages: [commit]
+      
+      - id: terragrunt_fmt
+        stages: [commit]
+      
+      - id: checkov
+        stages: [commit]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-merge-conflict
+
+  - repo: https://github.com/gruntwork-io/pre-commit
+    rev: v0.1.17
+    hooks:
+      - id: shellcheck
+        stages: [commit]
