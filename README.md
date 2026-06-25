@@ -2,7 +2,7 @@
 
 PolicySync is a full-stack, enterprise-grade Policy as Code (PaC) security enforcement platform. It automatically scans cloud infrastructure configurations (Infrastructure as Code - IaC) against a defined library of security rules, identifying violations and blocking unsafe deployments in the CI/CD pipeline before they reach production.
 
-![PolicySync Dashboard](assets/dashboard.png)
+[![PolicySync Dashboard](assets/dashboard.png)](https://jithun02.github.io/CLOUD-GAURD/overview)
 
 ---
 
